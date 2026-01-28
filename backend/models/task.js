@@ -24,6 +24,13 @@ const taskSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-}, { timestamps: true });
+    Isdeleted: {
+        type: Boolean,
+        default: false
+    }
+}, {
+
+    timestamps: true
+});
 
 module.exports = mongoose.model("Task", taskSchema);
